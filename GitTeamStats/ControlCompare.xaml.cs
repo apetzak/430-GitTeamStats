@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,18 +16,20 @@ using System.Windows.Shapes;
 namespace GitTeamStats
 {
     /// <summary>
-    /// Interaction logic for LoginWindow.xaml
+    /// Interaction logic for ControlCompare.xaml
     /// </summary>
-    public partial class LoginWindow : Window
+    public partial class ControlCompare : UserControl
     {
-        public LoginWindow()
+        public ControlCompare()
         {
             InitializeComponent();
+            MainWindow window = (MainWindow)App.Current.MainWindow;
+            window.Title = "Git Team Stats - Compare";
         }
 
-        private void BtnLogin_Click(object sender, RoutedEventArgs e)
+        private void BtnBack_Click(object sender, RoutedEventArgs e)
         {
-            BaseWindow.OpenWindow(typeof(MainWindow), this);
+            this.Content = new ControlMain();
         }
     }
 }

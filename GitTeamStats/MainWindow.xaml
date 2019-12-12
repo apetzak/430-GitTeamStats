@@ -5,30 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GitTeamStats"
         mc:Ignorable="d"
-        Title="Git Team Stats - Main" Height="450" Width="800">
+        Title="Git Team Stats" Height="450" Width="800">
     <Grid>
-        <Button x:Name="btnLogout" Content="Logout" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="117" Height="38" FontSize="20" FontWeight="Bold" Click="BtnLogout_Click"/>
-        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Height="300    " Margin="10,109,0,0" VerticalAlignment="Top" Width="772">
-            <DataGrid.Columns>
-                <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Name" MinWidth="100"/>
-                <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Email" MinWidth="100"/>
-                <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="# of Commits"/>
-                <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="% of Total"/>
-                <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Lines Added"/>
-                <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Lines Deleted"/>
-                <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Files Edited"/>
-            </DataGrid.Columns>
-        </DataGrid>
-        <Button x:Name="btnGraph" Content="Graph" HorizontalAlignment="Left" Margin="144,66,0,0" VerticalAlignment="Top" Width="117" Height="38" FontSize="20" FontWeight="Bold" Click="BtnGraph_Click"/>
-        <Button x:Name="btnCompare" Content="Compare" HorizontalAlignment="Left" Margin="277,66,0,0" VerticalAlignment="Top" Width="117" Height="38" FontSize="20" FontWeight="Bold" Click="BtnCompare_Click"/>
-        <Button x:Name="btnProfile" Content="Profile" HorizontalAlignment="Left" Margin="10,66,0,0" VerticalAlignment="Top" Width="117" Height="38" FontSize="20" FontWeight="Bold" Click="BtnProfile_Click"/>
-        <DatePicker x:Name="dateFrom" HorizontalAlignment="Left" Margin="537,80,0,0" VerticalAlignment="Top" CalendarClosed="Date_CalendarClosed"/>
-        <DatePicker x:Name="dateTo" HorizontalAlignment="Left" Margin="662,80,0,0" VerticalAlignment="Top" CalendarClosed="Date_CalendarClosed"/>
-        <Label Content="To Date" HorizontalAlignment="Left" Margin="537,54,0,0" VerticalAlignment="Top" Width="102"/>
-        <Label Content="From Date" HorizontalAlignment="Left" Margin="662,54,0,0" VerticalAlignment="Top" Width="102"/>
-        <ComboBox x:Name="cbFileExtensions" HorizontalAlignment="Left" Margin="537,26,0,0" VerticalAlignment="Top" Width="102"/>
-        <ComboBox x:Name="cbProject" HorizontalAlignment="Left" Margin="662,26,0,0" VerticalAlignment="Top" Width="102"/>
-        <Label Content="File Extensions" HorizontalAlignment="Left" Margin="537,0,0,0" VerticalAlignment="Top"/>
-        <Label Content="Project" HorizontalAlignment="Left" Margin="662,0,0,0" VerticalAlignment="Top"/>
+        
     </Grid>
 </Window>

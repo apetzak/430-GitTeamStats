@@ -10,32 +10,26 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace GitTeamStats
 {
     /// <summary>
-    /// Interaction logic for BaseWindow.xaml
+    /// Interaction logic for ControlProfile.xaml
     /// </summary>
-    public partial class BaseWindow : Window
+    public partial class ControlProfile : UserControl
     {
-        public BaseWindow()
+        public ControlProfile()
         {
             InitializeComponent();
+            MainWindow window = (MainWindow)App.Current.MainWindow;
+            window.Title = "Git Team Stats - Profile";
         }
 
         private void BtnBack_Click(object sender, RoutedEventArgs e)
         {
-            OpenWindow(typeof(MainWindow), this);
-        }
-
-        public static void OpenWindow(Type t, Window self)
-        {
-            Window window = Activator.CreateInstance(t) as Window;
-            window.Left = self.Left;
-            window.Top = self.Top;
-            window.Show();
-            self.Close();
+            this.Content = new ControlMain();
         }
     }
 }

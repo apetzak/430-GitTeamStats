@@ -68,64 +68,56 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="BaseWindow.xaml">
+    <Page Include="ControlCompare.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ComparisonWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
+    <Page Include="ControlGraph.xaml">
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ControlLogin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="GraphWindow.xaml">
+    <Page Include="ControlMain.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="LoginWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BaseWindow.xaml.cs">
-      <DependentUpon>BaseWindow.xaml</DependentUpon>
+    <Compile Include="ControlCompare.xaml.cs">
+      <DependentUpon>ControlCompare.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ComparisonWindow.xaml.cs">
-      <DependentUpon>ComparisonWindow.xaml</DependentUpon>
+    <Compile Include="ControlGraph.xaml.cs">
+      <DependentUpon>ControlGraph.xaml</DependentUpon>
     </Compile>
     <Compile Include="ControlLogin.xaml.cs">
       <DependentUpon>ControlLogin.xaml</DependentUpon>
     </Compile>
-    <Compile Include="GraphWindow.xaml.cs">
-      <DependentUpon>GraphWindow.xaml</DependentUpon>
+    <Compile Include="ControlMain.xaml.cs">
+      <DependentUpon>ControlMain.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="LoginWindow.xaml.cs">
-      <DependentUpon>LoginWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Page Include="ProfileWindow.xaml">
+    <Page Include="ControlProfile.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ControlProfile.xaml.cs">
+      <DependentUpon>ControlProfile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Models\Contributor.cs" />
     <Compile Include="Models\RepoLoader.cs" />
-    <Compile Include="ProfileWindow.xaml.cs">
-      <DependentUpon>ProfileWindow.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

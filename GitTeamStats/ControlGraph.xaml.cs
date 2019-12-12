@@ -10,18 +10,26 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace GitTeamStats
 {
     /// <summary>
-    /// Interaction logic for ComparisonWindow.xaml
+    /// Interaction logic for ControlGraph.xaml
     /// </summary>
-    public partial class ComparisonWindow : Window
+    public partial class ControlGraph : UserControl
     {
-        public ComparisonWindow()
+        public ControlGraph()
         {
             InitializeComponent();
+            MainWindow window = (MainWindow)App.Current.MainWindow;
+            window.Title = "Git Team Stats - Graph";
+        }
+
+        private void BtnBack_Click(object sender, RoutedEventArgs e)
+        {
+            this.Content = new ControlMain();
         }
     }
 }

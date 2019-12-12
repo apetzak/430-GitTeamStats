@@ -23,11 +23,13 @@ namespace GitTeamStats
         public ControlLogin()
         {
             InitializeComponent();
+            MainWindow window = (MainWindow)App.Current.MainWindow;
+            window.Title = "Git Team Stats - Login";
         }
 
         private void BtnLogin_Click(object sender, RoutedEventArgs e)
         {
-            //BaseWindow.OpenWindow(typeof(MainWindow), this);
+            this.Content = new ControlMain();
         }
     }
 }
