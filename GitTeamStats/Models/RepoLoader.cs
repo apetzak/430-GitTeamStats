@@ -18,7 +18,9 @@ namespace GitTeamStats.Models {
         /// </summary>
         /// <returns>A repository. If failed or canceled, returns null.</returns>
         static public Repository ShowDialog() {
+#pragma warning disable IDE0017 // Simplify object initialization
             CommonOpenFileDialog d = new CommonOpenFileDialog();
+#pragma warning restore IDE0017 // Simplify object initialization
             d.IsFolderPicker = true;
 
             CommonFileDialogResult result = d.ShowDialog();
@@ -42,7 +44,9 @@ namespace GitTeamStats.Models {
             try {
                 Repository repo = new Repository(pathToRepo);
                 return repo;
+#pragma warning disable CS0168 // Variable is declared but never used
             } catch (RepositoryNotFoundException e) {
+#pragma warning restore CS0168 // Variable is declared but never used
                 // TODO: handle error
             }
             return null;
