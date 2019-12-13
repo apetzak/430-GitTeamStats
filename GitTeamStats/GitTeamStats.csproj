@@ -68,6 +68,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="RepoController.cs" />
+    <Compile Include="Utils.cs" />
     <Page Include="ControlCompare.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -76,7 +78,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ControlLogin.xaml">
+    <Page Include="ControlLaunch.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -94,8 +96,8 @@
     <Compile Include="ControlGraph.xaml.cs">
       <DependentUpon>ControlGraph.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ControlLogin.xaml.cs">
-      <DependentUpon>ControlLogin.xaml</DependentUpon>
+    <Compile Include="ControlLaunch.xaml.cs">
+      <DependentUpon>ControlLaunch.xaml</DependentUpon>
     </Compile>
     <Compile Include="ControlMain.xaml.cs">
       <DependentUpon>ControlMain.xaml</DependentUpon>
@@ -143,6 +145,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="download %281%29.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

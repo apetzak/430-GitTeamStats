@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using LibGit2Sharp;
+using GitTeamStats.Models;
 
 namespace GitTeamStats
 {
@@ -20,11 +22,37 @@ namespace GitTeamStats
     /// </summary>
     public partial class ControlProfile : UserControl
     {
-        public ControlProfile()
+        private Contributor contributor;
+
+        public ControlProfile(Contributor c)
         {
             InitializeComponent();
-            MainWindow window = (MainWindow)App.Current.MainWindow;
-            window.Title = "Git Team Stats - Profile";
+            Utils.SetTitle(RepoController.instance.folder + " - Profile");
+            contributor = c;
+            SetLabelContent();
+            SetListBoxContent();
+        }
+
+        private void SetLabelContent()
+        {
+            lblName.Content = contributor.name;
+            lblEmail.Content = contributor.email;
+            lblNumOfCommits.Content = contributor.commits.Count.ToString();
+            lblPercentOfCommits.Content = contributor.GetPercentOfCommits(dateTo.SelectedDate, dateFrom.SelectedDate);
+            lblLineAdditions.Content = contributor.GetLineAdditions(dateTo.SelectedDate, dateFrom.SelectedDate);
+            lblLineDeletions.Content = contributor.GetLineDeletions(dateTo.SelectedDate, dateFrom.SelectedDate);
+            lblNumOfFilesEdited.Content = contributor.GetNumberOfFilesEdited(dateTo.SelectedDate, dateFrom.SelectedDate);
+        }
+
+        private void SetListBoxContent()
+        {
+
+        }
+
+        private void Date_CalendarClosed(object sender, RoutedEventArgs e)
+        {
+            SetLabelContent();
+            SetListBoxContent();
         }
 
         private void BtnBack_Click(object sender, RoutedEventArgs e)

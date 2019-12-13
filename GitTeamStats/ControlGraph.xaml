@@ -7,7 +7,42 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="117" Height="38" FontSize="20" FontWeight="Bold" Click="BtnBack_Click"/>
+        <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="15,10,0,0" VerticalAlignment="Top" Width="117" Height="38" FontSize="20" FontWeight="Bold" Click="BtnBack_Click"/>
+        <DatePicker x:Name="dateFrom" HorizontalAlignment="Left" Margin="257,13,0,0" VerticalAlignment="Top" CalendarClosed="Date_CalendarClosed" FontSize="20" SelectedDate="2019-12-13"/>
+        <DatePicker x:Name="dateTo" HorizontalAlignment="Left" Margin="590,13,0,0" VerticalAlignment="Top" CalendarClosed="Date_CalendarClosed" FontSize="20" SelectedDate="2020-01-10"/>
+        <Label Content="To Date" HorizontalAlignment="Left" Margin="173,11,0,0" VerticalAlignment="Top" Width="102" FontSize="20"/>
+        <Label Content="From Date" HorizontalAlignment="Left" Margin="482,11,0,0" VerticalAlignment="Top" Width="102" FontSize="20"/>
+        <Canvas HorizontalAlignment="Left" Height="258" Margin="57,89,0,0" VerticalAlignment="Top" Width="723" Background="White">
+            <Image Height="258" Source="download (1).jpg" Stretch="Fill" Width="475" Canvas.Left="85"/>
+        </Canvas>
+        <Label Content="Week 1" HorizontalAlignment="Left" Margin="105,346,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Label Content="Number of Commits" HorizontalAlignment="Left" Margin="-64,201,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="20">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-89.752"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label Content="Week 2" HorizontalAlignment="Left" Margin="207,346,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Label Content="Week 3" HorizontalAlignment="Left" Margin="309,346,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Label Content="Week 4" HorizontalAlignment="Left" Margin="401,346,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Label Content="Time" HorizontalAlignment="Left" Margin="365,365,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Button Content="" HorizontalAlignment="Left" Margin="57,64,0,0" VerticalAlignment="Top" Width="20" Background="Red"/>
+        <Label Content="Rex" HorizontalAlignment="Left" Margin="77,60,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Button Content="" HorizontalAlignment="Left" Margin="150,64,0,0" VerticalAlignment="Top" Width="20" Background="#FF68FF00"/>
+        <Label Content="Bill" HorizontalAlignment="Left" Margin="170,60,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Button Content="" HorizontalAlignment="Left" Margin="236,64,0,0" VerticalAlignment="Top" Width="20" Background="#FF0023FF"/>
+        <Label Content="Slinky" HorizontalAlignment="Left" Margin="256,60,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Label Content="Interval" HorizontalAlignment="Left" Margin="566,360,0,0" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="1.216,0.602"/>
+        <ComboBox HorizontalAlignment="Left" Margin="646,365,0,0" VerticalAlignment="Top" Width="134" Height="25">
+            <ListBoxItem Content="Days"/>
+            <ListBoxItem Content="Weeks"/>
+            <ListBoxItem Content="Months"/>
+            <ListBoxItem Content="Years"/>
+        </ComboBox>
 
     </Grid>
 </UserControl>

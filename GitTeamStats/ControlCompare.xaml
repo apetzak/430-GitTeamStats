@@ -7,6 +7,34 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="117" Height="38" FontSize="20" FontWeight="Bold" Click="BtnBack_Click"/>
+        <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="15,10,0,0" VerticalAlignment="Top" Width="117" Height="38" FontSize="20" FontWeight="Bold" Click="BtnBack_Click"/>
+        <DatePicker x:Name="dateFrom" HorizontalAlignment="Left" Margin="257,13,0,0" VerticalAlignment="Top" CalendarClosed="Date_CalendarClosed" FontSize="20"/>
+        <DatePicker x:Name="dateTo" HorizontalAlignment="Left" Margin="590,13,0,0" VerticalAlignment="Top" CalendarClosed="Date_CalendarClosed" FontSize="20"/>
+        <Label Content="To Date" HorizontalAlignment="Left" Margin="173,11,0,0" VerticalAlignment="Top" Width="102" FontSize="20"/>
+        <Label Content="From Date" HorizontalAlignment="Left" Margin="482,11,0,0" VerticalAlignment="Top" Width="102" FontSize="20"/>
+        <Label x:Name="lblName" Content="Murphy (120)" HorizontalAlignment="Left" Margin="249,58,0,0" VerticalAlignment="Top" FontSize="20" Width="239"/>
+        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="279" Margin="482,100,0,0" VerticalAlignment="Top" Width="292">
+            <ListBoxItem Content="Rex"/>
+            <ListBoxItem Content="Murphy"/>
+            <ListBoxItem Content="Kirk"/>
+            <ListBoxItem Content="Piggy"/>
+            <ListBoxItem Content="Gandalf"/>
+        </ListBox>
+        <Label Content="Selected Contributors" HorizontalAlignment="Left" Margin="482,63,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label x:Name="lblEmail" Content="Rex (14203)" HorizontalAlignment="Left" Margin="249,100,0,0" VerticalAlignment="Top" FontSize="20" Width="239"/>
+        <Label x:Name="lblNumOfCommits" Content="Piggy (1203)" HorizontalAlignment="Left" Margin="249,142,0,0" VerticalAlignment="Top" FontSize="20" Width="239"/>
+        <Label x:Name="lblPercentOfCommits" Content="Kirk (214)" HorizontalAlignment="Left" Margin="249,184,0,0" VerticalAlignment="Top" FontSize="20" Width="239"/>
+        <Label x:Name="lblLineAdditions" Content="Gandalf (1)" HorizontalAlignment="Left" Margin="249,226,0,0" VerticalAlignment="Top" FontSize="20" Width="239"/>
+        <Label x:Name="lblLineDeletions" Content="Piggy (24)" HorizontalAlignment="Left" Margin="249,268,0,0" VerticalAlignment="Top" FontSize="20" Width="239"/>
+        <Label x:Name="lblNumOfFilesEdited" Content="Rex (0)" HorizontalAlignment="Left" Margin="249,310,0,0" VerticalAlignment="Top" FontSize="20" Width="239"/>
+        <Label x:Name="lblName_Copy" Content="Most Commits:" HorizontalAlignment="Left" Margin="10,58,0,0" VerticalAlignment="Top" FontSize="20" Width="239"/>
+        <Label x:Name="lblEmail_Copy" Content="Most Line Additions:" HorizontalAlignment="Left" Margin="10,100,0,0" VerticalAlignment="Top" FontSize="20" Width="239"/>
+        <Label x:Name="lblNumOfCommits_Copy" Content="Most Line Deletions:" HorizontalAlignment="Left" Margin="10,142,0,0" VerticalAlignment="Top" FontSize="20" Width="239"/>
+        <Label x:Name="lblPercentOfCommits_Copy" Content="Most Files Edited:" HorizontalAlignment="Left" Margin="10,184,0,0" VerticalAlignment="Top" FontSize="20" Width="239"/>
+        <Label x:Name="lblLineAdditions_Copy" Content="Least Commits:" HorizontalAlignment="Left" Margin="10,226,0,0" VerticalAlignment="Top" FontSize="20" Width="239"/>
+        <Label x:Name="lblLineDeletions_Copy" Content="Least Line Additions:" HorizontalAlignment="Left" Margin="10,268,0,0" VerticalAlignment="Top" FontSize="20" Width="239"/>
+        <Label x:Name="lblNumOfFilesEdited_Copy" Content="Least Line Deletions" HorizontalAlignment="Left" Margin="10,310,0,0" VerticalAlignment="Top" FontSize="20" Width="239"/>
+        <Label x:Name="lblNumOfFilesEdited_Copy1" Content="Gandalf (1)" HorizontalAlignment="Left" Margin="249,352,0,0" VerticalAlignment="Top" FontSize="20" Width="239"/>
+        <Label x:Name="lblNumOfFilesEdited_Copy2" Content="Least Line Deletions" HorizontalAlignment="Left" Margin="10,352,0,0" VerticalAlignment="Top" FontSize="20" Width="239"/>
     </Grid>
 </UserControl>

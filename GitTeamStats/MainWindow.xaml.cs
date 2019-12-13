@@ -22,7 +22,7 @@ namespace GitTeamStats
         public MainWindow()
         {
             InitializeComponent();
-            Content = new ControlLogin();
+            Content = new ControlLaunch();
         }
     }
 }

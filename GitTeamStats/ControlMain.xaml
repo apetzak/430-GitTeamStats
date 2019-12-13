@@ -7,29 +7,41 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <Button x:Name="btnLogout" Content="Logout" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="117" Height="38" FontSize="20" FontWeight="Bold" Click="BtnLogout_Click"/>
-        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Height="300    " Margin="10,109,0,0" VerticalAlignment="Top" Width="772">
+        <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="15,10,0,0" VerticalAlignment="Top" Width="117" Height="38" FontSize="20" FontWeight="Bold" Click="BtnBack_Click"/>
+        <DataGrid x:Name="dataGrid" AutoGenerateColumns="False" Height="375" Margin="15,65,13,10" Width="772" BeginningEdit="DataGrid_BeginningEdit" CanUserResizeRows="False" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" SelectionChanged="DataGrid_SelectionChanged">
+            <DataGrid.CellStyle>
+                <Style TargetType="DataGridCell">
+                    <EventSetter Event="PreviewMouseDown" Handler="DataGridCell_PreviewMouseDown"/>
+                </Style>
+            </DataGrid.CellStyle>
             <DataGrid.Columns>
-                <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Name" MinWidth="100"/>
-                <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Email" MinWidth="100"/>
-                <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="# of Commits"/>
-                <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="% of Total"/>
-                <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Lines Added"/>
-                <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Lines Deleted"/>
-                <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Files Edited"/>
+                <DataGridTextColumn Binding="{Binding 'View Profile'}" ClipboardContentBinding="{x:Null}" Header="View Profile" CanUserReorder="False" MinWidth="80"/>
+                <DataGridTextColumn Binding="{Binding Name}" ClipboardContentBinding="{x:Null}" Header="Name" MinWidth="120"/>
+                <DataGridTextColumn Binding="{Binding Email}" ClipboardContentBinding="{x:Null}" Header="Email" MinWidth="135"/>
+                <DataGridTextColumn Binding="{Binding '# of Commits'}" ClipboardContentBinding="{x:Null}" Header="# of Commits"/>
+                <DataGridTextColumn Binding="{Binding '% of Total'}" ClipboardContentBinding="{x:Null}" Header="% of Total"/>
+                <DataGridTextColumn Binding="{Binding 'Lines Added'}" ClipboardContentBinding="{x:Null}" Header="Lines Added"/>
+                <DataGridTextColumn Binding="{Binding 'Lines Deleted'}" ClipboardContentBinding="{x:Null}" Header="Lines Deleted"/>
+                <DataGridTextColumn Binding="{Binding 'Files Edited'}" ClipboardContentBinding="{x:Null}" Header="Files Edited" MinWidth="200"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="btnGraph" Content="Graph" HorizontalAlignment="Left" Margin="144,66,0,0" VerticalAlignment="Top" Width="117" Height="38" FontSize="20" FontWeight="Bold" Click="BtnGraph_Click"/>
-        <Button x:Name="btnCompare" Content="Compare" HorizontalAlignment="Left" Margin="277,66,0,0" VerticalAlignment="Top" Width="117" Height="38" FontSize="20" FontWeight="Bold" Click="BtnCompare_Click"/>
-        <Button x:Name="btnProfile" Content="Profile" HorizontalAlignment="Left" Margin="10,66,0,0" VerticalAlignment="Top" Width="117" Height="38" FontSize="20" FontWeight="Bold" Click="BtnProfile_Click"/>
-        <DatePicker x:Name="dateFrom" HorizontalAlignment="Left" Margin="537,80,0,0" VerticalAlignment="Top" CalendarClosed="Date_CalendarClosed"/>
-        <DatePicker x:Name="dateTo" HorizontalAlignment="Left" Margin="662,80,0,0" VerticalAlignment="Top" CalendarClosed="Date_CalendarClosed"/>
-        <Label Content="To Date" HorizontalAlignment="Left" Margin="537,54,0,0" VerticalAlignment="Top" Width="102"/>
-        <Label Content="From Date" HorizontalAlignment="Left" Margin="662,54,0,0" VerticalAlignment="Top" Width="102"/>
-        <ComboBox x:Name="cbFileExtensions" HorizontalAlignment="Left" Margin="537,26,0,0" VerticalAlignment="Top" Width="102"/>
-        <ComboBox x:Name="cbProject" HorizontalAlignment="Left" Margin="662,26,0,0" VerticalAlignment="Top" Width="102"/>
-        <Label Content="File Extensions" HorizontalAlignment="Left" Margin="537,0,0,0" VerticalAlignment="Top"/>
-        <Label Content="Project" HorizontalAlignment="Left" Margin="662,0,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnGraph" Content="Graph" HorizontalAlignment="Left" Margin="148,10,0,0" VerticalAlignment="Top" Width="117" Height="38" FontSize="20" FontWeight="Bold" Click="BtnGraph_Click"/>
+        <Button x:Name="btnCompare" Content="Compare" HorizontalAlignment="Left" Margin="281,10,0,0" VerticalAlignment="Top" Width="117" Height="38" FontSize="20" FontWeight="Bold" Click="BtnCompare_Click"/>
+        <DatePicker x:Name="dateFrom" HorizontalAlignment="Left" Margin="548,24,0,0" VerticalAlignment="Top" CalendarClosed="Date_CalendarClosed"/>
+        <DatePicker x:Name="dateTo" HorizontalAlignment="Left" Margin="673,24,0,0" VerticalAlignment="Top" CalendarClosed="Date_CalendarClosed"/>
+        <Label Content="To Date" HorizontalAlignment="Left" Margin="548,0,0,0" VerticalAlignment="Top" Width="102"/>
+        <Label Content="From Date" HorizontalAlignment="Left" Margin="673,0,0,0" VerticalAlignment="Top" Width="102"/>
+        <ComboBox x:Name="cbFileExtensions" HorizontalAlignment="Left" Margin="419,26,0,0" VerticalAlignment="Top" Width="112">
+            <CheckBox Content=".config"/>
+            <CheckBox Content=".cs"/>
+            <CheckBox Content=".csproj"/>
+            <CheckBox Content=".dll"/>
+            <CheckBox Content=".exe"/>
+            <CheckBox Content=".pbd"/>
+            <CheckBox Content=".xaml"/>
+            <CheckBox Content=".xml"/>
+        </ComboBox>
+        <Label Content="File Extensions" HorizontalAlignment="Left" Margin="419,0,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </UserControl>

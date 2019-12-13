@@ -7,7 +7,26 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="117" Height="38" FontSize="20" FontWeight="Bold" Click="BtnBack_Click"/>
-
+        <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="15,10,0,0" VerticalAlignment="Top" Width="117" Height="38" FontSize="20" FontWeight="Bold" Click="BtnBack_Click"/>
+        <DatePicker x:Name="dateFrom" HorizontalAlignment="Left" Margin="257,13,0,0" VerticalAlignment="Top" CalendarClosed="Date_CalendarClosed" FontSize="20"/>
+        <DatePicker x:Name="dateTo" HorizontalAlignment="Left" Margin="590,13,0,0" VerticalAlignment="Top" CalendarClosed="Date_CalendarClosed" FontSize="20"/>
+        <Label Content="To Date" HorizontalAlignment="Left" Margin="173,11,0,0" VerticalAlignment="Top" Width="102" FontSize="20"/>
+        <Label Content="From Date" HorizontalAlignment="Left" Margin="482,11,0,0" VerticalAlignment="Top" Width="102" FontSize="20"/>
+        <Label x:Name="lblName" Content="null" HorizontalAlignment="Left" Margin="249,90,0,0" VerticalAlignment="Top" FontSize="20" Width="239"/>
+        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="279" Margin="482,100,0,0" VerticalAlignment="Top" Width="292"/>
+        <Label Content="Number of File Edits" HorizontalAlignment="Left" Margin="482,63,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label x:Name="lblEmail" Content="null" HorizontalAlignment="Left" Margin="249,132,0,0" VerticalAlignment="Top" FontSize="20" Width="239"/>
+        <Label x:Name="lblNumOfCommits" Content="null" HorizontalAlignment="Left" Margin="249,174,0,0" VerticalAlignment="Top" FontSize="20" Width="239"/>
+        <Label x:Name="lblPercentOfCommits" Content="null" HorizontalAlignment="Left" Margin="249,216,0,0" VerticalAlignment="Top" FontSize="20" Width="239"/>
+        <Label x:Name="lblLineAdditions" Content="null" HorizontalAlignment="Left" Margin="249,258,0,0" VerticalAlignment="Top" FontSize="20" Width="239"/>
+        <Label x:Name="lblLineDeletions" Content="null" HorizontalAlignment="Left" Margin="249,300,0,0" VerticalAlignment="Top" FontSize="20" Width="239"/>
+        <Label x:Name="lblNumOfFilesEdited" Content="null" HorizontalAlignment="Left" Margin="249,342,0,0" VerticalAlignment="Top" FontSize="20" Width="239"/>
+        <Label x:Name="lblName_Copy" Content="Name: " HorizontalAlignment="Left" Margin="10,90,0,0" VerticalAlignment="Top" FontSize="20" Width="239"/>
+        <Label x:Name="lblEmail_Copy" Content="Email Address: " HorizontalAlignment="Left" Margin="10,132,0,0" VerticalAlignment="Top" FontSize="20" Width="239"/>
+        <Label x:Name="lblNumOfCommits_Copy" Content="Number of Commits: " HorizontalAlignment="Left" Margin="10,174,0,0" VerticalAlignment="Top" FontSize="20" Width="239"/>
+        <Label x:Name="lblPercentOfCommits_Copy" Content="Percent of Total Commits: " HorizontalAlignment="Left" Margin="10,216,0,0" VerticalAlignment="Top" FontSize="20" Width="239"/>
+        <Label x:Name="lblLineAdditions_Copy" Content="Line Additions: " HorizontalAlignment="Left" Margin="10,258,0,0" VerticalAlignment="Top" FontSize="20" Width="239"/>
+        <Label x:Name="lblLineDeletions_Copy" Content="Line Deletions: " HorizontalAlignment="Left" Margin="10,300,0,0" VerticalAlignment="Top" FontSize="20" Width="239"/>
+        <Label x:Name="lblNumOfFilesEdited_Copy" Content="Number of Files Edited: " HorizontalAlignment="Left" Margin="10,342,0,0" VerticalAlignment="Top" FontSize="20" Width="239"/>
     </Grid>
 </UserControl>
